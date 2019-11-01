@@ -292,7 +292,10 @@ for(var i = 0; i < num2; i++){
   Return the longer of the two arrays.
 */
 
-//Code Here
+function longer(arr1, arr2){
+  arr1 < arr2 ? arr2 : arr1;
+  return arr2;
+}
 
 
 
@@ -304,7 +307,19 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-//Code Here
+function both(arr1, arr2){
+  let newArray = [];
+
+  for(let i = 0; i < arr1.length; i++){
+    for(let j = arr1.length-1; j >= 0; j--){
+      if(arr1[i] === arr1[j]){
+        newArray.push(arr1[i])
+        console.log(arr1[i])
+      }
+    }
+  }
+  return newArray;
+}
 
 
 
