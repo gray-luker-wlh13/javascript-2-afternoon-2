@@ -127,7 +127,22 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   and the second item in the array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
+function divider(numbersArray){
+  let evensAndOdds = [[], []];
+
+  for(let i = 0; i < numbersArray.length; i++){
+    if(numbersArray[i] % 2 === 0){
+      evensAndOdds[0].push(numbersArray[i])
+    }
+  }
+  for(let i = 0; i < numbersArray.length; i++){
+    if(numbersArray[i] % 2 === 1){
+      evensAndOdds[1].push(numbersArray[i])
+    }
+  }
+  return evensAndOdds;
+}
+
 
 
 
@@ -149,7 +164,16 @@ var getRandomArbitrary = function() {
   If it is, return true, if it's not, return false
 */
 
-//Code Here
+function finder(arr){
+  let randomNumber = getRandomArbitrary();
+
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] === randomNumber){
+      return true;
+    }
+  }
+  return false;
+}
 
 
 
@@ -178,7 +202,28 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem() --> [];
 */
 
-//Code Here
+function removeItem(myGroceryList, item){
+  let newArr = [];
+  if(myGroceryList && item){
+    for(let i = 0; i < myGroceryList.length; i++){
+      if(myGroceryList[i] === item){
+        myGroceryList.splice(i, 1)
+      }
+    }
+    return myGroceryList;
+  } else {
+    return newArr
+  }
+}
+function addItem(myGroceryList, item){
+  let newArr = [];
+  if(myGroceryList && item){
+    myGroceryList.push(item);
+    return myGroceryList;
+  } else {
+    return newArr;
+  }
+}
 
 
 
@@ -188,7 +233,15 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-//Code Here
+function maker(){
+  let numbMaker = [];
+
+  for(let i = 1; i < 216; i++){
+    numbMaker.push(i)
+  }
+
+  return numbMaker;
+}
 
 
 
@@ -204,7 +257,17 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   Your output should look like this -> [15, 19, 26, 29, 35, 44, 58]
 */
   
-//Code Here
+function addTen(numbers){
+  let result = [];
+  let numPlusTen = [];
+
+  for(let i = 0; i < numbers.length; i++){
+    result.push(+numbers[i]);
+    result[i] += 10;
+    numPlusTen.push(result[i])
+  }
+  return numPlusTen;
+}
 
 
 
